@@ -1,0 +1,29 @@
+<table class="table">
+  <thead>
+    <tr><th scope="col">Botoes</th>
+      <th scope="col">ID</th>
+      <th scope="col">NOME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">DATA DE NASCIMENTO</th>
+         <th scope="col">Telefones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{# each pessoas}}
+    <tr>
+      <th><a href="/show/{{this.id}}" class="btn btn-dark">Ver</a>
+      <a href="/atualizar/{{this.id}}" class="btn btn-dark">Atualizar</a>
+      <a href="/deletar/{{this.id}}" class="btn btn-dark">Deletar</a></th>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.nome}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.data_nascimento}}</td>
+       {{# each this.telefone}}
+     <td>{{this.Telefone}}</td>
+     {{/ each}}
+     {{/ each}}
+    </tr>
+    
+   
+  </tbody>
+</table>

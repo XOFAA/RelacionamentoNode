@@ -1,0 +1,42 @@
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Cadastrar Nova Pessoa
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de Pessoas</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>''
+      <form action="/cadastrar" method="post">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" name="nome" required
+                placeholder="Digite o Nome do contato" />
+
+            </div>
+            <div class="col-6 mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" name="email" id="email" />
+            </div>
+            <div class="col-6 mb-3">
+              <label for="data_nascimento" class="form-label">Data Nascimento</label>
+              <input type="date" class="form-control" name="data_nascimento" />
+            </div>
+             <div class="col-6 mb-3">
+              <label for="data_nascimento" class="form-label">Telefone</label>
+              <input type="text" class="form-control" name="telefone" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
